@@ -1,5 +1,5 @@
 # evogenometk
-Tool kit for my evolutionary genomic class
+This is a tool kit for my evolutionary genomic class, which is primairly based on command line interfaces with scripts I wrote to implement the various models covered in class. This repository may grow and be improved upon throughout the semester, depending on interest and utility. 
 
 ## Installation
 Within a conda environment, run:
@@ -8,10 +8,12 @@ Within a conda environment, run:
 
 ## Commands
 ### basic-wright-fisher
+This command evolves a randomly generated DNA sequence using Wright-Fisher style simulations. This implementation operates under most basic of assumptions. For example, populations are haploid and asexual, and a simple multiplicative fitness function is used. Evolved sequences are returned in the specified fasta file. 
 
 ```
 basic-wright-fisher -h
-
+```
+```
 usage: basic-wright-fisher [-h] [-l LENGTH] [--mutation_rate MUTATION_RATE] [--mean_effect MEAN_EFFECT] [--stdev_effect STDEV_EFFECT]
                            [-N POPULATION_SIZE] [-g GENERATIONS] [-o OUTPUT]
 
@@ -34,7 +36,8 @@ options:
   -o OUTPUT, --output OUTPUT
                         Output file
 
+```
 Example:
+```
 basic-wright-fisher --length 1000 --mutation_rate 1 --mean_effect 0 --stdev_effect 0.1 --population_size 1000 --generations 100 --output evolved_sequences.fasta
-
 ```
