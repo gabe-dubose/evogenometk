@@ -1,21 +1,17 @@
-from setuptools import setup
-from pathlib import Path
+from setuptools import setup, find_packages
 import os
-
-here = Path(__file__).parent.resolve()
-r_script = here / "basic_wright_fisher.R"
 
 setup(
     name='evogenometk',
-    version='0.1.0',
-    description='Command-line tool kit for my evolutionary genomics class',
-    author='Gabe DuBose',
-    packages=[],
+    version='2025.09',
+    packages=find_packages(),
     include_package_data=True,
-    package_data={'': ['basic_wright_fisher.R']},
     entry_points={
         'console_scripts': [
-            'basic-wright-fisher=basic_wright_fisher_wrapper:main',
+            'basic-wright-fisher=evogenometk.basic_wright_fisher_wrapper:main',
         ],
+    },
+    package_data={
+        'evogenometk': ['../basic_wright_fisher.R'],
     },
 )
