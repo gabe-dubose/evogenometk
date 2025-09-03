@@ -1,5 +1,4 @@
 from setuptools import setup, find_packages
-import os
 
 setup(
     name='evogenometk',
@@ -12,6 +11,6 @@ setup(
         ],
     },
     package_data={
-        'evogenometk': ['../basic_wright_fisher.R'],
+        'evogenometk': ['basic_wright_fisher.R'],  # now relative to package
     },
 )
