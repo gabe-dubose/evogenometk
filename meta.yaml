@@ -1,0 +1,20 @@
+package:
+  name: evogenometk
+  version: "2025.09.03"
+
+source:
+  path: .
+
+build:
+  noarch: generic
+  script: bash build.sh
+
+requirements:
+  build:
+    - r-base
+  run:
+    - r-base
+
+about:
+  home: "https://github.com/gabe-dubose/evogenometk"
+  summary: "Command-line tool kit for my evolutionary genomics class"

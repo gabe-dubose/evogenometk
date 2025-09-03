@@ -1,0 +1,2 @@
+#!/bin/bash
+Rscript $(dirname "$0")/basic_wright_fisher.R "$@"
